@@ -33,4 +33,18 @@ and open the template in the editor.
         <email>anderson@1999</email>
         <about>Computer Programmer</about>
     </user>
+    <user id="5">        
+        <name>Darth Vader</name>
+        <username>vader</username>
+        <password>luke</password>
+        <email>darth.vader@sith.org</email>
+        <about>Lord Sith</about>
+    </user>
+    <user id="6">        
+        <name>Luke Skywalker</name>
+        <username>luke</username>
+        <password>vader</password>
+        <email>luke.skywalker@jedi.org</email>
+        <about>Jedi Master</about>
+    </user>
 </users>
