@@ -4,7 +4,7 @@
 [![Docker Image](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
 [![Fixed by TiiZss](https://img.shields.io/badge/Fixed%20by-TiiZss-green.svg)](https://github.com/TiiZss)
 
-<a href="https://www.buymeacoffee.com/TiiZss" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/TiiZss" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 145px !important;" ></a>
 
 ## Overview
 
