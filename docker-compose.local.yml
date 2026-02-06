@@ -1,23 +1,23 @@
-
+version: '3'
 services:
   jvl:
-    image: tiizss/jvl:v2.1.0
-    build: 
-        dockerfile: ./Dockerfile
-        context: ./
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    container_name: jvl-core
     ports:
       - "8080:8080"
-    links: 
+    links:
       - mysql
     depends_on:
       - mysql
 
   mysql:
     image: mysql:5.7
+    container_name: jvl-mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_ROOT_HOST: "%"
       MYSQL_DATABASE: abc
     command:
       - "--default-authentication-plugin=mysql_native_password"
-
