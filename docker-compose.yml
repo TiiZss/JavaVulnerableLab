@@ -6,8 +6,10 @@ services:
         dockerfile: ./Dockerfile
         context: ./
     ports:
-      - 8080:8080
+      - "8080:8080"
     links: 
+      - mysql
+    depends_on:
       - mysql
 
   mysql:
@@ -18,3 +20,4 @@ services:
       MYSQL_DATABASE: abc
     command:
       - "--default-authentication-plugin=mysql_native_password"
+

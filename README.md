@@ -1,75 +1,47 @@
-This is a "Vulnerable" Web Application developed by Cyber Security and Privacy Foundation(www.cysecurity.org). This app is intended for the Java Programmers and other people who wish to learn about Web application vulnerabilities and write secure code.
+# Java Vulnerable Lab (Fixed 2026 Edition)
 
-**The full course content is now available on Github for free:**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Docker Image](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
+[![Fixed by TiiZss](https://img.shields.io/badge/Fixed%20by-TiiZss-green.svg)](https://github.com/TiiZss)
 
-https://github.com/CSPF-Founder/JavaSecurityCourse
+<a href="https://www.buymeacoffee.com/TiiZss" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
+## Overview
 
-**The full course on Hacking and Securing Web Java Programs is available in** 
+This is a fork of the original "Vulnerable" Web Application developed by **Cyber Security and Privacy Foundation** (www.cysecurity.org). We have updated and fixed it to work seamlessly in 2026 environments.
 
-https://www.udemy.com/hacking-securing-java-web-programming/
+**Original Repository:** [CSPF-Founder/JavaVulnerableLab](https://github.com/CSPF-Founder/JavaVulnerableLab)
 
-**Warning**: Don't run this app in Your Main Machine or in  an online server.  Install it in Vitual Machine.
+### Key Updates & Fixes (2026)
+- **Containerization**: Fully fixed `Dockerfile` and `docker-compose.yml` to support modern Docker environments.
+    - Switched to `maven:3-jdk-8` for building.
+    - Switched to `tomcat:9.0-jdk8` for runtime stability.
+- **XSS Challenges**: 
+    - **Reto 2 (Fixed)**: Implemented missing "Label Filters" challenge (`xss2.jsp`), allowing bypass techniques.
+    - **Reto 3 (Fixed)**: Implemented missing "Non-recursive Filters" challenge (`xss3.jsp`), testing nested tag payloads.
+- **Footer**: Updated copyright information.
 
- 
-How to Use/Setup ?
--------------
+## How to Use
 
-**Method 1.Super Very Easiest Method: Docker**
-  The easiest way to use Java Vulnerable is using Docker which set up everything for you with 1 command line
+### Quick Start with Docker (Recommended)
+1. Install Docker and Docker Compose.
+2. Clone this repository:
+   ```bash
+   git clone https://github.com/TiiZss/JavaVulnerableLab.git
+   cd JavaVulnerableLab
+   ```
+3. Run the container:
+   ```bash
+   docker-compose up -d --build
+   ```
+4. Access the lab at: `http://localhost:8080/JavaVulnerableLab`
 
-  Steps:
+### XSS Challenges
+Navigate to `http://localhost:8080/JavaVulnerableLab/vulnerability/xss/` to access the challenges.
+- **Reto 2:** Try to evade filter using `<SCRIPT>` or `<img onerror>`.
+- **Reto 3:** Try "nested" payloads like `<scr<script>ipt>`.
 
-     1. Install Docker: https://docs.docker.com/engine/installation/ 
-     2. Install docker-compose: https://docs.docker.com/compose/install/
-     3. Inside this directory, run `sudo docker-compose up` and wait untill everything is configured for you.
-     4. In your Browser, go to "http://localhost:8080/JavaVulnerableLab/install.jsp
-     5. Change the JDBC URL from jdbc:mysql://localhost:3306 to jdbc:mysql://mysql:3306
-     6. Click the Install Button
-     7. Enjoy :)
+## Original Description
+This app is intended for Java Programmers and other people who wish to learn about Web application vulnerabilities and write secure code.
 
-
-**Method 2.Very Easiest Method : VirtualBox VM**
-  The second most easiest way to use Java Vulnerable is using the VirtualBox VM which has everything set up and ready to use. 
-  
-  Steps:
-      
-      1. Install the VirtualBox : https://www.virtualbox.org/wiki/Downloads
-      2. Download the VM Image from here : http://sourceforge.net/projects/javavulnerablelab/files/v0.1/JavaVulnerableLab.ova/download
-      3. Import the JavaVulnerable.ova into VirtualBox.
-      4. Change the Network Settings to Host-Only Network 
-      5. Start the Machine and Log into the Machine( Credentials; username: root password: cspf) 
-      6. Start Tomcat by entering "service tomcat start" in the Terminal
-      7. Start mysql by entering "service mysql start" in the Terminal
-      8. Find the IP Address of Machine
-      9. In your Browser, go to "http://[IP_ADDRESS_OF_VM]:8080/JavaVulnerableLab/install.jsp 
-      10. Click the Install Button
-      11. Enjoy :)
-      
-**Method 3.Easiest Method : Standalone Web Application**
-  In this mehtod, you will be running an executable "JAR" file which runs the application with an embedded Apache Tomcat. 
- 
-    Steps:
-    
-        1. Install JDK
-        2. Download Executable Jar from here: http://sourceforge.net/projects/javavulnerablelab/files/v0.2/JavaVulnerableLab.jar/download
-        3. Double Click the JavaVulnerable.jar to run( if double click is not working, run this command "java -jar JavaVulnerable.jar" in your Terminal or CMD)
-        4. In your Browser, go to "http://localhost:8080/JavaVulnerableLab/install.jsp 
-        5. Click the Install Button
-        
-**Method 4. Using War file:**
-  This is a NORMAL method to deploy the WAR file. 
-  
-  Steps:
-  
-       1. Install Apache Tomcat server
-       2. Go to http://[Tomcat_INSTALLED_IP]:8080/manager/  (make sure you have modified tomcat-users.xml file of the tomcat to allow the manager).
-       3. Download our WAR file from here: https://sourceforge.net/projects/javavulnerablelab/files/latest/JavaVulnerableLab.war/download
-       4. Deploy the WAR in Apache Tomcat manager.
-       5. Go to http://[Tomcat_INSTALLED_IP]:8080/JavaVulnerableLab/install.jsp 
-       6. Click the Install Button
-       
-
-Get the VulnerableSpring Project from here:
-https://github.com/CSPF-Founder/VulnerableSpring
-
+**Warning**: Don't run this app in Your Main Machine or in an online server. Install it in a Virtual Machine or Container.
