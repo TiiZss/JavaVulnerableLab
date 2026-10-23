@@ -1,4 +1,4 @@
-# Java Vulnerable Lab (Fixed 2026 Edition)
+# Java Vulnerable Lab 2013 (Fixed 2026 Edition)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docker Image](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
